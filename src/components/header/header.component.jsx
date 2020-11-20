@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './header.styles.scss';
 import { ReactComponent as Logo } from '../../assests/crown.svg'
+import { auth } from '../../firebase/firebase.utils';
 
-function Header() {
+function Header({ currentUser }) {
     return (
         <div className="header">
             <Link className="logo-container" to='/'>
@@ -16,9 +17,14 @@ function Header() {
                 <Link className="option" to='/shop'>
                     CONTACT
                 </Link>
-                <Link className="option" to='/shop'>
-                    SIGN IN
-                </Link>
+                {
+                    currentUser ?
+                    <div className="option" onClick={() => auth.signOut()}>SIGN OUT</div>
+                    :
+                    <Link className="option" to='/signin'>
+                        SIGN IN
+                    </Link>
+                }
             </div>
             
         </div>
