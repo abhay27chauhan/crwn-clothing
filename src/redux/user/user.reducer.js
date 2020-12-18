@@ -3,7 +3,7 @@ const INITIAL_STATE = {
 }
 
 export const ACTION = {
-    SET_CURRENT_USER: "set-current-user"
+    SET_CURRENT_USER: "SET_CURRENT_USER"
 }
 
 const userReducer = (state = INITIAL_STATE, action) => {
