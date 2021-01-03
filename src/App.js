@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Route, Switch } from 'react-router-dom';
+
 import './App.css';
+
 import Header from './components/header/header.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import HomePage from './pages/homepage/homepage.component.jsx';
@@ -38,15 +40,15 @@ class App extends React.Component {
 
   render() {
     return (
-    <div className="App">
-      <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage}/>
-        <Route path="/shop" component={ShopPage}/>
-        <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to="/" />) : (<SignInSignUpPage />)}/>
-      </Switch>
-    </div>
-  );
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path="/" component={HomePage}/>
+          <Route path="/shop" component={ShopPage}/>
+          <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to="/" />) : (<SignInSignUpPage />)}/>
+        </Switch>
+      </div>
+    );
   }
 }
 

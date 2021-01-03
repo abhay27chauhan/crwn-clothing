@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; // higher order component
 
 import './header.styles.scss';
+
 import { ReactComponent as Logo } from '../../assests/crown.svg'
 import { auth } from '../../firebase/firebase.utils';
 import CartIcon from '../cart-icon/cart-icon.component';
