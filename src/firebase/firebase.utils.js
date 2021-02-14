@@ -4,7 +4,7 @@ import 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB_vKzOKtQYcN6f6kBKtRReEeXEDfjmCjA",
-  authDomain: "crwn-clothing-ec8d6.firebaseapp.com",
+  authDomain: "crwn-clothers-live.herokuapp.com",
   databaseURL: "https://crwn-clothing-ec8d6.firebaseio.com",
   projectId: "crwn-clothing-ec8d6",
   storageBucket: "crwn-clothing-ec8d6.appspot.com",
@@ -53,3 +53,5 @@ export default firebase;
 // query -> 2 objects -> reference and snapshot 
 // doc ref -> can perfom crud operations -> docRef.get() -> doc Snapshot
 // col ref -> collectionRef.get() -> query snapshot
+
+//authDomain: "crwn-clothing-ec8d6.firebaseapp.com"
